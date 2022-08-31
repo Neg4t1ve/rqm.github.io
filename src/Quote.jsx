@@ -1,8 +1,4 @@
-import React from "react";
-import ReactDOM from "react-dom/client";
-import "bootstrap/dist/css/bootstrap.min.css";
-
-import { useEffect, useState } from "react";
+import React, { useEffect, useState } from "react";
 import { Container, Button } from "react-bootstrap";
 
 const colors = [
@@ -28,7 +24,7 @@ const getRandomQuote = async () => {
   return data;
 };
 
-function App() {
+function Quote() {
   const [color, setColor] = useState("");
   const [quote, setQuote] = useState({});
   useEffect(() => {
@@ -80,7 +76,7 @@ function App() {
         </p>
         <Container className=" d-flex flex-row-reverse  justify-content-between my-3">
           <Button
-            id="new-quote"
+            id="new-qoute"
             className="shadow-none"
             onClick={handleClick}
             style={{
@@ -114,5 +110,4 @@ function App() {
   );
 }
 
-const root = ReactDOM.createRoot(document.getElementById("root"));
-root.render(<App />);
+export default Quote;
